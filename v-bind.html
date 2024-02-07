@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>'v-bind' Image Source Example</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    
+
+    img {
+      width: 60%;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>'v-bind' Image Source Example</h1>
+
+<div id="app">
+  <p>Flower by bind</p>
+  <img v-bind:src="url">
+  <div v-bind:style="{width:'500px', height:'300px', backgroundColor:'green'}">
+    Some Text
+  </div>
+</div>
+
+
+<script>
+    const app = Vue.createApp({
+        data(){
+            return{
+                url:"pexels-pixabay-56866.jpg"
+            }
+        }
+    })
+    app.mount("#app")
+</script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <p v-if="score=>7">
+            Yes, Excellent <!-- corrected typo -->
+        </p>
+        <p v-else-if="score=>5">
+            Good
+        </p>
+        <p v-else>
+            Fail <!-- added missing opening <p> tag -->
+        </p>
+    </div>
+    
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    score: 7
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+    
+</body>
+</html>
