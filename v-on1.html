@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <img v-if="imageChange" src="01.jpg"  style="width: 500px" height="500px"></img>
+    <img v-else src="02.jpg" style="width: 500px" height="500px">
+    <button @click="imageChange = !imageChange">Click Here</button>
+  </div>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          imageChange: true,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+</html>

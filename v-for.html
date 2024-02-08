@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biral</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <style>
+    #app > div {
+      border: solid black 1px;
+      width: 80%;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    img {
+      width: 70px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Birla</h1>
+
+
+<div id="app">
+ 
+  <div v-for="y in may biral">
+
+    <img v-bind:src="y">
+  </div>
+</div>
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+      biral: [
+        '01.jpg',
+        '02.jpg',
+        '03.jpg',
+        
+      ]
+    }
+   }
+  })
+  
+  app.mount('#app')
+
+</script>
+
+</body>
+</html>
