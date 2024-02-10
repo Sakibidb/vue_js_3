@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        <button v-on:mousemove="HelloFunc">Click Here</button>
+        <br>
+        {{ name }}
+        <input type="text" v-on:input="nameEntry">
+        <br>
+        <button v-on:click="addValue(+2)">Add + 5</button>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    msg: "",
+                    name:"",
+                    counter:0
+                }
+            },
+            methods: {
+                HelloFunc() {
+                    this.msg = "Good Morning"
+                },
+                nameEntry(target){
+                    this.name=event.target.value
+                }
+            },
+            addValue(n){
+                this.counter = this.counter + n
+            }
+        
+        })
+        app.mount("#app")
+    </script>
+</body>
+</html>

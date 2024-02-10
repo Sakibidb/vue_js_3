@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        
+        <img src="map.png" alt="" id="map" v-on:click="valueNid($event, 'This is the map of Dhaka')" name="Image Name">
+        <br>
+        {{valueWithID}}
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data()
+            {
+                return{
+                    valueWithID:""
+                }
+            },
+            methods:{
+                valueNid(e, v){
+                    this.valueWithID = "ID:" + e.target.id + ", Name: " + e.target.name + ": ";
+                    this.valueWithID += v
+                }
+            }
+        })
+        app.mount("#app")
+        </script>
+</body>
+</html>
