@@ -1,8 +1,7 @@
 <script setup>
-
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { Head, Link, useForm, usePage } from "@inertiajs/vue3";
+import FrontEndLayout from "@/Layouts/FrontEndLayout.vue";
 
 //const {students} = usePage().props
 
@@ -16,8 +15,7 @@ const props = defineProps({
 </script>
 
 <template>
-    
-    <AuthenticatedLayout>
+    <FrontEndLayout>
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
@@ -87,5 +85,5 @@ const props = defineProps({
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </FrontEndLayout>
 </template>
